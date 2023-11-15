@@ -1,0 +1,77 @@
+{
+    "company": [
+        {
+            "tenant_id": 1,
+            "id": 1,
+            "name": "Empresa A",
+            "created_at": "2023-01-01T00:00:00Z",
+            "deleted_at": null,
+            "updated_at": "2023-01-01T12:00:00Z"
+        }
+    ],
+    "pessoa": [
+        {
+            "id": 1,
+            "name": "João da Silva",
+            "cpf_cnpj": "123.456.789-01",
+            "person_type": "FISICA",
+            "user_type_id": 1,
+            "company_id": 1,
+            "created_at": "2023-01-02T08:00:00Z",
+            "deleted_at": null,
+            "updated_at": "2023-01-02T10:30:00Z"
+        },
+        {
+            "id": 2,
+            "name": "Maria Oliveira",
+            "cpf_cnpj": "987.654.321-00",
+            "person_type": "FISICA",
+            "user_type_id": 1,
+            "company_id": 1,
+            "created_at": "2023-01-03T09:00:00Z",
+            "deleted_at": null,
+            "updated_at": "2023-01-03T11:45:00Z"
+        }
+    ],
+    "usertype": [
+        {
+            "id": 1,
+            "tipo": "SUPPLIER",
+            "user": true,
+            "created_at": "2023-01-03T09:00:00Z",
+            "deleted_at": null,
+            "updated_at": "2023-01-03T11:45:00Z"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "username": "joao_silva",
+            "password": "hashed_password",
+            "old_password": null,
+            "accesstype_id": 1
+        }
+    ],
+    "accesstype": [
+        {
+            "id": 1,
+            "name": "Admin"
+        },
+        {
+            "id": 2,
+            "name": "User"
+        },
+        {
+            "id": 3,
+            "name": "Prestador"
+        },
+        {
+            "id": 4,
+            "name": "Fornecedor"
+        },
+        {
+            "id": 5,
+            "name": "Gestor"
+        }
+    ]
+}
