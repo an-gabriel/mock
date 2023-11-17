@@ -1,77 +1,322 @@
 {
-    "company": [
-        {
-            "tenant_id": 1,
-            "id": 1,
-            "name": "Empresa A",
-            "created_at": "2023-01-01T00:00:00Z",
-            "deleted_at": null,
-            "updated_at": "2023-01-01T12:00:00Z"
+  "company": [
+    {
+      "idTenant": 1,
+      "id": 1,
+      "name": "Empresa A",
+      "country": "BR",
+      "identificationCode": "1",
+      "zip": "12345-789",
+      "address": "Endereço 1",
+      "mail": "",
+      "departmentInternal": "Departamento 1",
+      "cnpjStatus": "Status CNPJ",
+      "stateRegistration": "ZZ",
+      "friendlyName": "Nome Fantasia",
+      "internalStatus": "status",
+      "financialContact": "contato 1",
+      "operationalContact": "contato 2",
+      "businessTypeId": 1,
+      "complement": "complemento",
+      "number": "123",
+      "ddi": "55",
+      "ddd": "11",
+      "phone": "99888-7766",
+      "created_at": "2023-01-01T00:00:00Z",
+      "deleted_at": null,
+      "updated_at": "2023-01-01T12:00:00Z"
+    }
+  ],
+
+  "person": [
+    {
+      "id": 1,
+      "idPersonType": 1,
+      "idCompany": 1,
+      "idManager": 1,
+      "firstName": "João",
+      "lastName": "da Silva",
+      "gender": "male",
+      "birthDate": "1990-01-01",
+      "nationalIdType": "CPF",
+      "nationalId": "123.456.789-00",
+      "phone": "99888-7766",
+      "personalEmail": "my@email.com",
+      "country": "BR",
+      "postalCode": "12345-789",
+      "homeAddress": "Rua Residencial, 123",
+      "state": "ZZ",
+      "city": "Minha Cidade",
+      "profilePicture": "https://teste.homolog.contractflow.tech/images/logos/contractflow-logo-with-name.png",
+      "idJobPosition": 3,
+      "status": "Active",
+      "globalCreateBy": "1",
+      "certificationsUpload": "",
+      "created_at": "2023-01-02T08:00:00Z",
+      "deleted_at": null,
+      "updated_at": "2023-01-02T10:30:00Z",
+      "blocked": false,
+      "complement": "complemento",
+      "number": "123",
+      "ddi": "55",
+      "ddd": "11",
+      "socialName": "Nome Social",
+      "position": 3,
+      "personType": {
+        "id": 1,
+        "type": "ADMINISTRATOR"
+      },
+      "manager": {
+        "id": 1,
+        "idPerson": {
+          "id": 2,
+          "firstName": "Maria",
+          "position": 2
         }
-    ],
-    "pessoa": [
-        {
-            "id": 1,
-            "name": "João da Silva",
-            "cpf_cnpj": "123.456.789-01",
-            "person_type": "FISICA",
-            "user_type_id": 1,
-            "company_id": 1,
-            "created_at": "2023-01-02T08:00:00Z",
-            "deleted_at": null,
-            "updated_at": "2023-01-02T10:30:00Z"
-        },
-        {
-            "id": 2,
-            "name": "Maria Oliveira",
-            "cpf_cnpj": "987.654.321-00",
-            "person_type": "FISICA",
-            "user_type_id": 1,
-            "company_id": 1,
-            "created_at": "2023-01-03T09:00:00Z",
-            "deleted_at": null,
-            "updated_at": "2023-01-03T11:45:00Z"
+      }
+    },
+    {
+      "id": 2,
+      "idPersonType": 2,
+      "idCompany": 1,
+      "idManager": 2,
+      "firstName": "Maria",
+      "lastName": "Oliveira",
+      "gender": "male",
+      "birthDate": "1990-01-01",
+      "nationalIdType": "CPF",
+      "nationalId": "123.456.789-00",
+      "phone": "99888-7766",
+      "personalEmail": "my@email.com",
+      "country": "BR",
+      "postalCode": "12345-789",
+      "homeAddress": "Rua Residencial, 123",
+      "state": "ZZ",
+      "city": "Minha Cidade",
+      "profilePicture": "https://teste.homolog.contractflow.tech/images/logos/contractflow-logo-with-name.png",
+      "idJobPosition": 3,
+      "status": "Active",
+      "globalCreateBy": "1",
+      "certificationsUpload": "",
+      "created_at": "2023-01-02T08:00:00Z",
+      "deleted_at": null,
+      "updated_at": "2023-01-02T10:30:00Z",
+      "blocked": false,
+      "complement": "complemento",
+      "number": "123",
+      "ddi": "55",
+      "ddd": "11",
+      "socialName": "Nome Social",
+      "personType": {
+        "id": 3,
+        "type": "OUTSOURCE EMPLOYEE"
+      },
+      "manager": {
+        "id": 2,
+        "idPerson": {
+          "id": 1,
+          "firstName": "José",
+          "position": 3
         }
-    ],
-    "usertype": [
+      }
+    }
+  ],
+
+  "person-type": [
+    {
+      "id": 1,
+      "idCompany": 1,
+      "type": "ADMINISTRATOR",
+      "created_at": "2023-01-03T09:00:00Z",
+      "deleted_at": null,
+      "updated_at": "2023-01-03T11:45:00Z"
+    },
+    {
+      "id": 2,
+      "idCompany": 1,
+      "tipo": "OUTSOURCE EMPLOYEE",
+      "created_at": "2023-01-03T09:00:00Z",
+      "deleted_at": null,
+      "updated_at": "2023-01-03T11:45:00Z"
+    }
+  ],
+
+  "user": [
+    {
+      "id": 1,
+      "idAccessRole": 1,
+      "idPerson": 1,
+      "idOutSourceEmployee": null,
+      "idSupplier": null,
+      "email": "joao_silva@email.com",
+      "active": true,
+      "blocked": false,
+      "userCodeCreation": "1",
+      "passwordStrength": 0,
+      "hasTwoFactorAuth": false,
+      "twoFactorAuthSecret": "ASD65A4S6D5A4SD",
+      "is2faConfigured": false,
+      "created_at": "2023-01-03T09:00:00Z",
+      "deleted_at": null,
+      "updated_at": "2023-01-03T11:45:00Z",
+      "AccessRoles": [
         {
-            "id": 1,
-            "tipo": "SUPPLIER",
-            "user": true,
-            "created_at": "2023-01-03T09:00:00Z",
-            "deleted_at": null,
-            "updated_at": "2023-01-03T11:45:00Z"
+          "id": 1,
+          "name": "Admin",
+          "AccessClaims": [
+              {
+                  "id": 1,
+                  "name": "read_company"
+              },
+              {
+                  "id": 2,
+                  "name": "write_company"
+              },
+              {
+                  "id": 3,
+                  "name": "read_users"
+              },
+              {
+                  "id": 4,
+                  "name": "write_users"
+              },
+              {
+                  "id": 5,
+                  "name": "read_partner"
+              },
+              {
+                  "id": 6,
+                  "name": "write_partner"
+              },
+              {
+                  "id": 7,
+                  "name": "read_customer"
+              },
+              {
+                  "id": 8,
+                  "name": "write_customer"
+              },
+              {
+                  "id": 9,
+                  "name": "read_partner_person"
+              },
+              {
+                  "id": 10,
+                  "name": "write_partner_person"
+              }
+          ]
         }
-    ],
-    "users": [
+      ]
+    },
+    {
+      "id": 2,
+      "idAccessRole": 1,
+      "idPerson": 2,
+      "idOutSourceEmployee": null,
+      "idSupplier": null,
+      "email": "maria@email.com",
+      "active": true,
+      "blocked": false,
+      "userCodeCreation": "1",
+      "passwordStrength": 0,
+      "hasTwoFactorAuth": false,
+      "twoFactorAuthSecret": "ASD65A4S6D5A4SD",
+      "is2faConfigured": false,
+      "created_at": "2023-01-03T09:00:00Z",
+      "deleted_at": null,
+      "updated_at": "2023-01-03T11:45:00Z",
+      "AccessRoles": [
         {
-            "id": 1,
-            "username": "joao_silva",
-            "password": "hashed_password",
-            "old_password": null,
-            "accesstype_id": 1
+          "id": 1,
+          "name": "Outsource Employee",
+          "AccessClaims": [
+              {
+                  "id": 1,
+                  "name": "read_company"
+              },
+              {
+                  "id": 2,
+                  "name": "write_company"
+              },
+              {
+                  "id": 3,
+                  "name": "read_users"
+              },
+              {
+                  "id": 4,
+                  "name": "write_users"
+              },
+              {
+                  "id": 5,
+                  "name": "read_partner"
+              },
+              {
+                  "id": 6,
+                  "name": "write_partner"
+              },
+              {
+                  "id": 7,
+                  "name": "read_customer"
+              },
+              {
+                  "id": 8,
+                  "name": "write_customer"
+              },
+              {
+                  "id": 9,
+                  "name": "read_partner_person"
+              },
+              {
+                  "id": 10,
+                  "name": "write_partner_person"
+              }
+          ]
         }
-    ],
-    "accesstype": [
-        {
-            "id": 1,
-            "name": "Admin"
-        },
-        {
-            "id": 2,
-            "name": "User"
-        },
-        {
-            "id": 3,
-            "name": "Prestador"
-        },
-        {
-            "id": 4,
-            "name": "Fornecedor"
-        },
-        {
-            "id": 5,
-            "name": "Gestor"
-        }
-    ]
+      ]
+    }
+  ],
+
+  "access-role": [
+    {
+      "id": 1,
+      "name": "Admin"
+    },
+    {
+      "id": 2,
+      "name": "User"
+    },
+    {
+      "id": 3,
+      "name": "Outsource Employee"
+    },
+    {
+      "id": 4,
+      "name": "Supplier"
+    },
+    {
+      "id": 5,
+      "name": "Operator"
+    }
+  ],
+
+  "manager": [
+    {
+      "id": 1,
+      "idPerson": 1,
+      "idAccessRole": 1,
+      "idCompany": 1,
+      "created_at": "2023-01-03T09:00:00Z",
+      "deleted_at": null,
+      "updated_at": "2023-01-03T11:45:00Z"
+    },
+    {
+      "id": 2,
+      "idPerson": 2,
+      "idAccessRole": 3,
+      "idCompany": 1,
+      "created_at": "2023-01-03T09:00:00Z",
+      "deleted_at": null,
+      "updated_at": "2023-01-03T11:45:00Z"
+    }
+  ]
 }
